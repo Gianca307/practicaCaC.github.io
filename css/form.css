@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --f_fontSize: 15px;
+    --f_lineHeight: 1.5;
+
+    /* LAYOUT FLEX */
+
+    --h_flex: 100vh;
+    --w_flex: 100vw;
+
+    /* COLORES */
+
+    --c_red50: #FFEBEE;
+    --c_red100: #FFCDD2;
+    --c_red200: #EF9A9A;
+    --c_red300: #E57373;
+    --c_red400: #EF5350;
+    --c_red500: #F44336;
+    --c_red600: #E53935;
+    --c_red700: #D32F2F;
+    --c_red800: #C62828;
+    --c_red900: #B71C1C;
+
+    --c_white: #FFFFFF;
+    --c_black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Poppins;
+}
+
+html {
+    font-size: var(--f_fontSize);
+}
+
+body{
+    /* background-color: #3E2723; */
+}
+
+
+/* Formulario */
+
+.body_form{
+   
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://raw.githubusercontent.com/FacuGodoy2608/TP_Front/main/img/img_plataforma.jpg");
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* HEADER  */
+
+.Header {
+    width: var(--w_flex);
+    height: 10vh;
+
+    background-color: var(--c_red900);
+}
+
+.Header .nav_principal{
+    display: flex;
+    justify-content: left;
+
+    width: 100%;
+    height: 100%;
+}
+
+.Header .nav_principal .cac_logo{
+    margin: auto 0 auto calc(var(--f_fontSize) * 4);
+    display: flex;
+
+    animation-name: movimientoLogo;
+    animation-duration: 2s;
+}
+
+.Header .nav_principal .cac_logo a{
+    color: var(--c_white);
+    text-decoration: none;
+    font-weight: 500;
+
+    display: inline-flex;
+    align-items: center;
+}
+
+.Header .nav_principal .cac_logo a figure{
+    margin: auto;
+}
+
+.Header .nav_principal .cac_logo a figure img{
+    height: calc(var(--f_fontSize) * 2);
+    width: auto;
+
+    padding-right: calc(var(--f_fontSize) * 0.9 );
+}
+
+/* BODY  */
+
+.form{
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    width: 100vw;
+    height: 90vh;
+}
+
+.form .form_section{
+    padding: 1rem 2rem;
+    margin-top: 70px;
+    text-align: center;
+    width: fit-content;
+    background-color:#000000;
+    opacity: 80%;
+    color: #FFFFFF;
+    font-size:medium;
+}
+
+.boton{
+    font-size: calc(var(--f_fontSize)*1);
+    padding: 1rem 2rem;
+    background-color:#C62828;
+    color: #FFFFFF;
+    margin-top: 10px; 
+    font-weight: 500;
+}
+
+.form h1{
+    font-weight: 1000;
+    margin-bottom: 10px;
+    font-size: calc(var(--f_fontSize)*2.5); 
+}
+
+.form_contenido{
+    text-align: center;
+    font-size:medium;
+    font-weight: 500;
+
+    label{
+        margin-right: 15px;
+    }
+}
+
+/* DESPUES ORDENAR */
+
+.error input:not(.check, .boton), .error select{
+    border: 2px solid #C62828;
+}
+
+
+/* ANIMACIONES */
+
+@keyframes movimientoLogo{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
